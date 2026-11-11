@@ -1,1 +1,668 @@
 
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --purple: #7655b8;
+    --dark-purple: #493477;
+    --pink: #f5a9c8;
+    --light-pink: #fff0f6;
+    --blue: #a9d9ed;
+    --light-blue: #effaff;
+    --yellow: #ffdb83;
+    --green: #b9dfc5;
+    --dark: #373044;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #fffafd;
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #49347712;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    color: var(--purple);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+
+/* BOTÕES */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 15px;
+    transition: .3s;
+    box-shadow: 0 5px 15px #7655b833;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--dark-purple);
+}
+
+
+/* INTRODUÇÃO */
+
+.hero {
+    min-height: 530px;
+    padding: 75px 9%;
+    background: linear-gradient(120deg, #fce4f0, #e5f5ff, #f2eaff);
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 20px 0;
+    color: var(--dark-purple);
+}
+
+.hero-content p {
+    font-size: 17px;
+    max-width: 540px;
+    margin-bottom: 28px;
+    color: #62596e;
+}
+
+.tag {
+    display: inline-block;
+    background: white;
+    padding: 8px 17px;
+    border-radius: 30px;
+    font-weight: 800;
+    color: var(--purple);
+    font-size: 13px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: 15px 15px 0 #f5b4d1;
+}
+
+
+/* SEÇÕES */
+
+.section {
+    padding: 85px 9%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: var(--purple);
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: var(--dark-purple);
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #81778c;
+    font-size: 15px;
+}
+
+
+/* EXPLICAÇÃO */
+
+.intro {
+    background: white;
+}
+
+.intro-text {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;
+    color: #635c6d;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 35px auto 0;
+    padding: 25px;
+    border-radius: 20px;
+    background: var(--light-blue);
+    border-left: 5px solid #83c9e8;
+}
+
+.info-icon {
+    font-size: 40px;
+}
+
+.info-box h3 {
+    color: #477c9d;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    font-size: 14px;
+}
+
+
+/* CARTÕES DOS ANIMAIS */
+
+.animals {
+    background: #f8f2ff;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.animal-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px #49347712;
+    transition: .3s;
+}
+
+.animal-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px #49347720;
+}
+
+.animal-card img {
+    height: 205px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.animal-number {
+    font-size: 12px;
+    font-weight: 900;
+    color: #b28cdd;
+}
+
+.card-content h3 {
+    color: var(--dark-purple);
+    font-size: 21px;
+    margin: 5px 0 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #706779;
+    margin-bottom: 18px;
+}
+
+.highlight {
+    display: inline-block;
+    background: #f1eaff;
+    color: #7655b8;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 900;
+    border-radius: 20px;
+}
+
+
+/* COMPARAÇÃO */
+
+.comparison {
+    background: white;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.comparison-card {
+    padding: 35px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.human {
+    background: #fff0f6;
+}
+
+.animal {
+    background: #eaf7ff;
+}
+
+.comparison-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.comparison-card h3 {
+    font-size: 22px;
+    color: var(--dark-purple);
+    margin-bottom: 10px;
+}
+
+.comparison-card p {
+    color: #6b6375;
+    font-size: 15px;
+}
+
+.curiosity {
+    background: #fff8df;
+    padding: 25px;
+    margin: 35px auto 0;
+    max-width: 900px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.curiosity h3 {
+    color: #98712a;
+    margin-bottom: 8px;
+}
+
+
+/* MITOS E VERDADES */
+
+.myths {
+    background: #fff3f8;
+}
+
+.myth-list {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 18px;
+}
+
+.myth-card {
+    background: white;
+    padding: 23px;
+    border-radius: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 15px #4934770c;
+}
+
+.myth-icon {
+    font-size: 35px;
+}
+
+.myth-card h3 {
+    font-size: 17px;
+    color: var(--dark-purple);
+    margin-bottom: 5px;
+}
+
+.myth-card p {
+    font-size: 14px;
+    color: #756c7e;
+    margin-top: 9px;
+}
+
+.myth-label {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.truth {
+    background: #ffe1e8;
+    color: #cb5479;
+}
+
+.true {
+    background: #ddf5e4;
+    color: #43895b;
+}
+
+
+/* QUIZ */
+
+.quiz-section {
+    background: linear-gradient(135deg, #e9e1ff, #e5f7ff, #ffe8f1);
+}
+
+.quiz-container {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #49347715;
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--purple);
+    margin-bottom: 15px;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #eee8f7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ad85dc, #f3a5c6);
+    border-radius: 20px;
+    transition: .4s;
+}
+
+#question {
+    color: var(--dark-purple);
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.answers {
+    display: grid;
+    gap: 13px;
+}
+
+.answer-btn {
+    background: #f8f5fc;
+    color: #50465f;
+    border: 2px solid transparent;
+    padding: 15px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+    transition: .2s;
+}
+
+.answer-btn:hover:not(:disabled) {
+    border-color: #a889d2;
+    background: #f2eaff;
+}
+
+.answer-btn:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.answer-btn.correct {
+    background: #e0f7e8;
+    border-color: #70bd86;
+    color: #307e49;
+}
+
+.answer-btn.wrong {
+    background: #ffe7eb;
+    border-color: #e68da2;
+    color: #b54a67;
+}
+
+#feedback {
+    min-height: 30px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.next-btn {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.next-btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.result {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.result-icon {
+    font-size: 65px;
+}
+
+.result h2 {
+    color: var(--dark-purple);
+    margin: 10px 0;
+}
+
+.result p {
+    margin: 12px 0;
+    color: #706779;
+}
+
+.result .btn {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* CONCLUSÃO */
+
+.conclusion {
+    background: linear-gradient(120deg, #e8f8ee, #eaf4ff);
+    text-align: center;
+}
+
+.conclusion-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.conclusion-content span {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #548a67;
+}
+
+.conclusion h2 {
+    font-size: clamp(28px, 4vw, 39px);
+    color: #426b55;
+    margin: 15px 0;
+    line-height: 1.3;
+}
+
+.conclusion p {
+    color: #61766a;
+    margin-bottom: 25px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background: #493477;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer p:first-child {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+footer span {
+    font-size: 13px;
+    color: #e5d9f7;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #cbbce2;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .animal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .animal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-container {
+        padding: 23px 18px;
+    }
+
+    #question {
+        font-size: 19px;
+    }
+
+    .myth-card {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .hero-image img {
+        height: 230px;
+    }
+}
+
